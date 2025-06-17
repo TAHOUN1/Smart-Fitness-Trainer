@@ -2,6 +2,7 @@ numpy==1.19.5
 mediapipe==0.8.9.1
 opencv-python-headless==4.5.5.64
 setuptools==57.5.0
+wheel==0.37.1
 fastapi==0.88.0
 python-multipart==0.0.5
 uvicorn==0.20.0

@@ -47,6 +47,7 @@ ENV PORT=8000
 
 # Copy start.sh and make it executable
 COPY start.sh /start.sh
+RUN sed -i 's/\r$//' /start.sh
 RUN chmod +x /start.sh
 
 # Run the application (THIS IS THE IMPORTANT PART)

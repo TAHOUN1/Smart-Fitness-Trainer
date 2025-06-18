@@ -45,6 +45,10 @@ EXPOSE 8000
 # Set environment variable
 ENV PORT=8000
 
+# Copy start.sh and make it executable
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+
 # Run the application (THIS IS THE IMPORTANT PART)
 # Force rebuild for Railway deployment
-CMD ["sh", "-c", "uvicorn backend:app --host 0.0.0.0 --port $PORT"]
+CMD ["/start.sh"]
